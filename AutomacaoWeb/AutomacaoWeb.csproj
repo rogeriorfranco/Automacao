@@ -1,0 +1,919 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C3252228-01E2-4B42-9927-C9EFA42AC70A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutomacaoWeb</RootNamespace>
+    <AssemblyName>AutomacaoWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\bootstrap-select.min.css" />
+    <Content Include="dist\css\AdminLTE.css" />
+    <Content Include="dist\css\AdminLTE.min.css" />
+    <Content Include="dist\css\font-awesome.css" />
+    <Content Include="dist\css\font-awesome.min.css" />
+    <Content Include="dist\css\ionicons.css" />
+    <Content Include="dist\css\ionicons.min.css" />
+    <Content Include="dist\css\skins\all-skins.css" />
+    <Content Include="dist\css\skins\all-skins.min.css" />
+    <Content Include="dist\css\skins\skin-black-light.css" />
+    <Content Include="dist\css\skins\skin-black-light.min.css" />
+    <Content Include="dist\css\skins\skin-black.css" />
+    <Content Include="dist\css\skins\skin-black.min.css" />
+    <Content Include="dist\css\skins\skin-blue-light.css" />
+    <Content Include="dist\css\skins\skin-blue-light.min.css" />
+    <Content Include="dist\css\skins\skin-blue.css" />
+    <Content Include="dist\css\skins\skin-blue.min.css" />
+    <Content Include="dist\css\skins\skin-green-light.css" />
+    <Content Include="dist\css\skins\skin-green-light.min.css" />
+    <Content Include="dist\css\skins\skin-green.css" />
+    <Content Include="dist\css\skins\skin-green.min.css" />
+    <Content Include="dist\css\skins\skin-purple-light.css" />
+    <Content Include="dist\css\skins\skin-purple-light.min.css" />
+    <Content Include="dist\css\skins\skin-purple.css" />
+    <Content Include="dist\css\skins\skin-purple.min.css" />
+    <Content Include="dist\css\skins\skin-red-light.css" />
+    <Content Include="dist\css\skins\skin-red-light.min.css" />
+    <Content Include="dist\css\skins\skin-red.css" />
+    <Content Include="dist\css\skins\skin-red.min.css" />
+    <Content Include="dist\css\skins\skin-yellow-light.css" />
+    <Content Include="dist\css\skins\skin-yellow-light.min.css" />
+    <Content Include="dist\css\skins\skin-yellow.css" />
+    <Content Include="dist\css\skins\skin-yellow.min.css" />
+    <Content Include="dist\fonts\fontawesome-webfont.svg" />
+    <Content Include="dist\fonts\ionicons.svg" />
+    <Content Include="dist\img\algar-telecom-logo.png" />
+    <Content Include="dist\img\avatar.png" />
+    <Content Include="dist\img\avatar04.png" />
+    <Content Include="dist\img\avatar2.png" />
+    <Content Include="dist\img\avatar3.png" />
+    <Content Include="dist\img\avatar5.png" />
+    <Content Include="dist\img\boxed-bg.jpg" />
+    <Content Include="dist\img\boxed-bg.png" />
+    <Content Include="dist\img\credit\american-express.png" />
+    <Content Include="dist\img\credit\cirrus.png" />
+    <Content Include="dist\img\credit\mastercard.png" />
+    <Content Include="dist\img\credit\mestro.png" />
+    <Content Include="dist\img\credit\paypal.png" />
+    <Content Include="dist\img\credit\paypal2.png" />
+    <Content Include="dist\img\credit\visa.png" />
+    <Content Include="dist\img\default-50x50.gif" />
+    <Content Include="dist\img\icons.png" />
+    <Content Include="dist\img\loading\loading-spinner-blue.gif" />
+    <Content Include="dist\img\loading\loading-spinner-default.gif" />
+    <Content Include="dist\img\loading\loading-spinner-grey.gif" />
+    <Content Include="dist\img\loading\loading.gif" />
+    <Content Include="dist\img\photo1.png" />
+    <Content Include="dist\img\photo2.png" />
+    <Content Include="dist\img\photo3.jpg" />
+    <Content Include="dist\img\photo4.jpg" />
+    <Content Include="dist\img\user1-128x128.jpg" />
+    <Content Include="dist\img\user2-160x160.jpg" />
+    <Content Include="dist\img\user3-128x128.jpg" />
+    <Content Include="dist\img\user4-128x128.jpg" />
+    <Content Include="dist\img\user5-128x128.jpg" />
+    <Content Include="dist\img\user6-128x128.jpg" />
+    <Content Include="dist\img\user7-128x128.jpg" />
+    <Content Include="dist\img\user8-128x128.jpg" />
+    <Content Include="dist\js\app.js" />
+    <Content Include="dist\js\app.min.js" />
+    <Content Include="dist\js\app_iframe.js" />
+    <Content Include="dist\js\app_iframe.min.js" />
+    <Content Include="dist\js\demo.js" />
+    <Content Include="dist\js\pages\dashboard.js" />
+    <Content Include="dist\js\pages\dashboard2.js" />
+    <Content Include="dist\js\teste.js" />
+    <Content Include="Home.aspx" />
+    <Content Include="content\Page.css" />
+    <Content Include="content\progressBar.css" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\loadingUP.gif" />
+    <Content Include="packages.config" />
+    <Content Include="content\bootstrap-datepicker.css.map" />
+    <Content Include="content\fonts\fontawesome-webfont.eot" />
+    <Content Include="content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="content\fonts\fontawesome-webfont.woff" />
+    <Content Include="content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="content\fonts\FontAwesome.otf" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="content\fonts\ODelI1aHBYDBqgeIAH2zlNV_2ngZ8dMf8fLgjYEouxg.woff" />
+    <Content Include="content\fonts\toadOcfmlt9b38dHJxOBGEo0As1BFRXtCDhS66znb_k.woff" />
+    <Content Include="content\fonts\toadOcfmlt9b38dHJxOBGOode0-EuMkY--TSyExeINg.woff" />
+    <Content Include="dist\fonts\fontawesome-webfont.eot" />
+    <Content Include="dist\fonts\fontawesome-webfont.ttf" />
+    <Content Include="dist\fonts\fontawesome-webfont.woff" />
+    <Content Include="dist\fonts\fontawesome-webfont.woff2" />
+    <Content Include="dist\fonts\FontAwesome.otf" />
+    <Content Include="dist\fonts\ionicons.eot" />
+    <Content Include="dist\fonts\ionicons.ttf" />
+    <Content Include="dist\fonts\ionicons.woff" />
+    <None Include="Properties\PublishProfiles\Deploy.pubxml" />
+    <Content Include="pages\calendar.html" />
+    <Content Include="pages\charts\chartjs.html" />
+    <Content Include="pages\charts\flot.html" />
+    <Content Include="pages\charts\inline.html" />
+    <Content Include="pages\charts\morris.html" />
+    <Content Include="pages\examples\404.html" />
+    <Content Include="pages\examples\500.html" />
+    <Content Include="pages\examples\blank.html" />
+    <Content Include="pages\examples\invoice-print.html" />
+    <Content Include="pages\examples\invoice.html" />
+    <Content Include="pages\examples\lockscreen.html" />
+    <Content Include="pages\examples\login.html" />
+    <Content Include="pages\examples\pace.html" />
+    <Content Include="pages\examples\profile.html" />
+    <Content Include="pages\examples\register.html" />
+    <Content Include="pages\forms\advanced.html" />
+    <Content Include="pages\forms\advanced_iframe.html" />
+    <Content Include="pages\forms\editors.html" />
+    <Content Include="pages\forms\editors_iframe.html" />
+    <Content Include="pages\forms\general.html" />
+    <Content Include="pages\forms\general_iframe.html" />
+    <Content Include="pages\forms\teste_iframe.html" />
+    <Content Include="pages\index_iframe.html" />
+    <Content Include="pages\layout\boxed.html" />
+    <Content Include="pages\layout\collapsed-sidebar.html" />
+    <Content Include="pages\layout\fixed.html" />
+    <Content Include="pages\layout\top-nav.html" />
+    <Content Include="pages\mailbox\compose.html" />
+    <Content Include="pages\mailbox\mailbox.html" />
+    <Content Include="pages\mailbox\read-mail.html" />
+    <Content Include="pages\tables\data.html" />
+    <Content Include="pages\tables\simple.html" />
+    <Content Include="pages\UI\buttons.html" />
+    <Content Include="pages\UI\buttons_iframe.html" />
+    <Content Include="pages\UI\general.html" />
+    <Content Include="pages\UI\general_iframe.html" />
+    <Content Include="pages\UI\icons.html" />
+    <Content Include="pages\UI\icons_iframe.html" />
+    <Content Include="pages\UI\modals.html" />
+    <Content Include="pages\UI\modals_iframe.html" />
+    <Content Include="pages\UI\sliders.html" />
+    <Content Include="pages\UI\sliders_iframe.html" />
+    <Content Include="pages\UI\timeline.html" />
+    <Content Include="pages\UI\timeline_iframe.html" />
+    <Content Include="pages\welcome_iframe.html" />
+    <Content Include="pages\widgets.html" />
+    <Content Include="page\Upload.aspx" />
+    <Content Include="page\ViewAcidente.aspx" />
+    <Content Include="page\ViewCancelamento.aspx" />
+    <Content Include="page\ViewEntregaAparelho.aspx" />
+    <Content Include="page\ViewExecLimiDesc.aspx" />
+    <Content Include="page\ViewFraude.aspx" />
+    <Content Include="page\ViewMigracaoIndevida.aspx" />
+    <Content Include="page\ViewNegativacaoIndevida.aspx" />
+    <Content Include="page\ViewOutros.aspx" />
+    <Content Include="page\ViewPortabilidade.aspx" />
+    <Content Include="page\ViewProblemasComVendas.aspx" />
+    <Content Include="page\ViewProblemasTecnicos.aspx" />
+    <Content Include="page\ViewRedeCobertura.aspx" />
+    <Content Include="page\ViewServicosAdicionais.aspx" />
+    <Content Include="page\WebForm1.aspx" />
+    <Content Include="preview\contextmenu.jpg" />
+    <Content Include="preview\GIF.gif" />
+    <Content Include="preview\img1.png" />
+    <Content Include="preview\tabs.jpg" />
+    <Content Include="scripts\image.js" />
+    <Content Include="scripts\automacao.js" />
+    <Content Include="scripts\formularioacordo.js" />
+    <Content Include="scripts\jquery.mask.min.js" />
+    <Content Include="scripts\jquery.maskMoney.js" />
+    <Content Include="scripts\outros.js" />
+    <Content Include="scripts\rede-cobertura.js" />
+    <Content Include="scripts\teste.js" />
+    <Content Include="scripts\upload.js" />
+    <Content Include="scripts\vanilla-masker.min.js" />
+    <Content Include="scripts\bootstrap-select.min.js" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\AdminLTE.min.css" />
+    <Content Include="content\all-skins.min.css" />
+    <Content Include="content\bootstrap-datepicker.css" />
+    <Content Include="content\bootstrap-datepicker.min.css" />
+    <Content Include="content\bootstrap.min.css" />
+    <Content Include="content\font-awesome.min.css" />
+    <Content Include="content\fonts\fontawesome-webfont.svg" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="content\googleapis.css" />
+    <Content Include="content\iCheck\all.css" />
+    <Content Include="content\iCheck\flat\aero%402x.png" />
+    <Content Include="content\iCheck\flat\aero.css" />
+    <Content Include="content\iCheck\flat\aero.png" />
+    <Content Include="content\iCheck\flat\blue%402x.png" />
+    <Content Include="content\iCheck\flat\blue.css" />
+    <Content Include="content\iCheck\flat\blue.png" />
+    <Content Include="content\iCheck\flat\flat%402x.png" />
+    <Content Include="content\iCheck\flat\flat.css" />
+    <Content Include="content\iCheck\flat\flat.png" />
+    <Content Include="content\iCheck\flat\green%402x.png" />
+    <Content Include="content\iCheck\flat\green.css" />
+    <Content Include="content\iCheck\flat\green.png" />
+    <Content Include="content\iCheck\flat\grey%402x.png" />
+    <Content Include="content\iCheck\flat\grey.css" />
+    <Content Include="content\iCheck\flat\grey.png" />
+    <Content Include="content\iCheck\flat\orange%402x.png" />
+    <Content Include="content\iCheck\flat\orange.css" />
+    <Content Include="content\iCheck\flat\orange.png" />
+    <Content Include="content\iCheck\flat\pink%402x.png" />
+    <Content Include="content\iCheck\flat\pink.css" />
+    <Content Include="content\iCheck\flat\pink.png" />
+    <Content Include="content\iCheck\flat\purple%402x.png" />
+    <Content Include="content\iCheck\flat\purple.css" />
+    <Content Include="content\iCheck\flat\purple.png" />
+    <Content Include="content\iCheck\flat\red%402x.png" />
+    <Content Include="content\iCheck\flat\red.css" />
+    <Content Include="content\iCheck\flat\red.png" />
+    <Content Include="content\iCheck\flat\yellow%402x.png" />
+    <Content Include="content\iCheck\flat\yellow.css" />
+    <Content Include="content\iCheck\flat\yellow.png" />
+    <Content Include="content\iCheck\flat\_all.css" />
+    <Content Include="content\iCheck\futurico\futurico%402x.png" />
+    <Content Include="content\iCheck\futurico\futurico.css" />
+    <Content Include="content\iCheck\futurico\futurico.png" />
+    <Content Include="content\iCheck\icheck.js" />
+    <Content Include="content\iCheck\icheck.min.js" />
+    <Content Include="content\iCheck\line\aero.css" />
+    <Content Include="content\iCheck\line\blue.css" />
+    <Content Include="content\iCheck\line\green.css" />
+    <Content Include="content\iCheck\line\grey.css" />
+    <Content Include="content\iCheck\line\line%402x.png" />
+    <Content Include="content\iCheck\line\line.css" />
+    <Content Include="content\iCheck\line\line.png" />
+    <Content Include="content\iCheck\line\orange.css" />
+    <Content Include="content\iCheck\line\pink.css" />
+    <Content Include="content\iCheck\line\purple.css" />
+    <Content Include="content\iCheck\line\red.css" />
+    <Content Include="content\iCheck\line\yellow.css" />
+    <Content Include="content\iCheck\line\_all.css" />
+    <Content Include="content\iCheck\minimal\aero%402x.png" />
+    <Content Include="content\iCheck\minimal\aero.css" />
+    <Content Include="content\iCheck\minimal\aero.png" />
+    <Content Include="content\iCheck\minimal\blue%402x.png" />
+    <Content Include="content\iCheck\minimal\blue.css" />
+    <Content Include="content\iCheck\minimal\blue.png" />
+    <Content Include="content\iCheck\minimal\green%402x.png" />
+    <Content Include="content\iCheck\minimal\green.css" />
+    <Content Include="content\iCheck\minimal\green.png" />
+    <Content Include="content\iCheck\minimal\grey%402x.png" />
+    <Content Include="content\iCheck\minimal\grey.css" />
+    <Content Include="content\iCheck\minimal\grey.png" />
+    <Content Include="content\iCheck\minimal\minimal%402x.png" />
+    <Content Include="content\iCheck\minimal\minimal.css" />
+    <Content Include="content\iCheck\minimal\minimal.png" />
+    <Content Include="content\iCheck\minimal\orange%402x.png" />
+    <Content Include="content\iCheck\minimal\orange.css" />
+    <Content Include="content\iCheck\minimal\orange.png" />
+    <Content Include="content\iCheck\minimal\pink%402x.png" />
+    <Content Include="content\iCheck\minimal\pink.css" />
+    <Content Include="content\iCheck\minimal\pink.png" />
+    <Content Include="content\iCheck\minimal\purple%402x.png" />
+    <Content Include="content\iCheck\minimal\purple.css" />
+    <Content Include="content\iCheck\minimal\purple.png" />
+    <Content Include="content\iCheck\minimal\red%402x.png" />
+    <Content Include="content\iCheck\minimal\red.css" />
+    <Content Include="content\iCheck\minimal\red.png" />
+    <Content Include="content\iCheck\minimal\yellow%402x.png" />
+    <Content Include="content\iCheck\minimal\yellow.css" />
+    <Content Include="content\iCheck\minimal\yellow.png" />
+    <Content Include="content\iCheck\minimal\_all.css" />
+    <Content Include="content\iCheck\polaris\polaris%402x.png" />
+    <Content Include="content\iCheck\polaris\polaris.css" />
+    <Content Include="content\iCheck\polaris\polaris.png" />
+    <Content Include="content\iCheck\square\aero%402x.png" />
+    <Content Include="content\iCheck\square\aero.css" />
+    <Content Include="content\iCheck\square\aero.png" />
+    <Content Include="content\iCheck\square\blue%402x.png" />
+    <Content Include="content\iCheck\square\blue.css" />
+    <Content Include="content\iCheck\square\blue.png" />
+    <Content Include="content\iCheck\square\green%402x.png" />
+    <Content Include="content\iCheck\square\green.css" />
+    <Content Include="content\iCheck\square\green.png" />
+    <Content Include="content\iCheck\square\grey%402x.png" />
+    <Content Include="content\iCheck\square\grey.css" />
+    <Content Include="content\iCheck\square\grey.png" />
+    <Content Include="content\iCheck\square\orange%402x.png" />
+    <Content Include="content\iCheck\square\orange.css" />
+    <Content Include="content\iCheck\square\orange.png" />
+    <Content Include="content\iCheck\square\pink%402x.png" />
+    <Content Include="content\iCheck\square\pink.css" />
+    <Content Include="content\iCheck\square\pink.png" />
+    <Content Include="content\iCheck\square\purple%402x.png" />
+    <Content Include="content\iCheck\square\purple.css" />
+    <Content Include="content\iCheck\square\purple.png" />
+    <Content Include="content\iCheck\square\red%402x.png" />
+    <Content Include="content\iCheck\square\red.css" />
+    <Content Include="content\iCheck\square\red.png" />
+    <Content Include="content\iCheck\square\square%402x.png" />
+    <Content Include="content\iCheck\square\square.css" />
+    <Content Include="content\iCheck\square\square.png" />
+    <Content Include="content\iCheck\square\yellow%402x.png" />
+    <Content Include="content\iCheck\square\yellow.css" />
+    <Content Include="content\iCheck\square\yellow.png" />
+    <Content Include="content\iCheck\square\_all.css" />
+    <Content Include="content\jquery-ui.theme.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\Logo.png" />
+    <Content Include="page\ViewAcordoPrevio.aspx" />
+    <Content Include="scripts\acidente.js" />
+    <Content Include="scripts\acordoprevio.js" />
+    <Content Include="scripts\bootstrap-datepicker.min.js" />
+    <Content Include="scripts\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\cancelamento.js" />
+    <Content Include="scripts\entregaaparelho.js" />
+    <Content Include="scripts\execLimiDesc.js" />
+    <Content Include="scripts\fraude.js" />
+    <Content Include="scripts\icheck.min.js" />
+    <Content Include="scripts\jquery-3.3.1.min.js" />
+    <Content Include="scripts\jquery-ui-auto-complete.min.js" />
+    <Content Include="scripts\jquery.inputmask.js" />
+    <Content Include="scripts\jquery.sumoselect.min.js" />
+    <Content Include="scripts\jquery.tablesorter.min.js" />
+    <Content Include="scripts\MeasureTool.js" />
+    <Content Include="scripts\MeasureTool.min.js" />
+    <Content Include="scripts\menu.js" />
+    <Content Include="scripts\migracaoindevida.js" />
+    <Content Include="scripts\moment.js" />
+    <Content Include="scripts\negativacaoindevida.js" />
+    <Content Include="scripts\portabilidade.js" />
+    <Content Include="scripts\problemascomvendas.js" />
+    <Content Include="scripts\problemastecnicos.js" />
+    <Content Include="scripts\servicoAdicional.js" />
+    <Content Include="content\sumoselect.css" />
+    <Content Include="template\RptAcidente.aspx" />
+    <Content Include="template\RptAcordoPrevio.aspx" />
+    <Content Include="template\RptCancelamento.aspx" />
+    <Content Include="template\RptEntregaAparelho.aspx" />
+    <Content Include="template\RptExecLimiDesc.aspx" />
+    <Content Include="template\RptFraude.aspx" />
+    <Content Include="template\RptMigracaoIndevida.aspx" />
+    <Content Include="template\RptNegativacaoIndevida.aspx" />
+    <Content Include="template\RptOutros.aspx" />
+    <Content Include="template\RptPortabilidade.aspx" />
+    <Content Include="template\RptProblemasComVendas.aspx" />
+    <Content Include="template\RptProblemaTecnico.aspx" />
+    <Content Include="template\RptRedeCobertura.aspx" />
+    <Content Include="template\RptServicosAdicionais.aspx" />
+    <Content Include="template\UserControlAlertBootstrap.ascx" />
+    <Content Include="template\UserControlExecQuestao1.ascx" />
+    <Content Include="template\UserControlQuestao10.ascx" />
+    <Content Include="template\UserControlOcorrenciaNet.ascx" />
+    <Content Include="template\UserControlQuestao13.ascx" />
+    <Content Include="template\UserControlQuestao14.ascx" />
+    <Content Include="template\UserControlQuestao12.ascx" />
+    <Content Include="template\UserControlQuestao11.ascx" />
+    <Content Include="template\UserControlExecQuestao3.ascx" />
+    <Content Include="template\UserControlFormularioAcordo.ascx" />
+    <Content Include="template\UserControlShowImage.ascx" />
+    <Content Include="template\UserControlHeader.ascx" />
+    <Content Include="template\UserControlQuestao3_4.ascx" />
+    <Content Include="template\UserControlQuestao5.ascx" />
+    <Content Include="template\UserControlQuestao6.ascx" />
+    <Content Include="template\UserControlQuestao7.ascx" />
+    <Content Include="template\UserControlUpdateProgress.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app_Start\RouteConfig.cs" />
+    <Compile Include="controllers\SubController.cs" />
+    <Compile Include="controllers\ImageController.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="page\Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\Upload.aspx.designer.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\ViewAcidente.aspx.cs">
+      <DependentUpon>ViewAcidente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\ViewAcidente.aspx.designer.cs">
+      <DependentUpon>ViewAcidente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\ViewAcordoPrevio.aspx.cs">
+      <DependentUpon>ViewAcordoPrevio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\ViewAcordoPrevio.aspx.designer.cs">
+      <DependentUpon>ViewAcordoPrevio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\ViewCancelamento.aspx.cs">
+      <DependentUpon>ViewCancelamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\ViewCancelamento.aspx.designer.cs">
+      <DependentUpon>ViewCancelamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\ViewEntregaAparelho.aspx.cs">
+      <DependentUpon>ViewEntregaAparelho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\ViewEntregaAparelho.aspx.designer.cs">
+      <DependentUpon>ViewEntregaAparelho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\ViewExecLimiDesc.aspx.cs">
+      <DependentUpon>ViewExecLimiDesc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\ViewExecLimiDesc.aspx.designer.cs">
+      <DependentUpon>ViewExecLimiDesc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\ViewFraude.aspx.cs">
+      <DependentUpon>ViewFraude.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\ViewFraude.aspx.designer.cs">
+      <DependentUpon>ViewFraude.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\ViewMigracaoIndevida.aspx.cs">
+      <DependentUpon>ViewMigracaoIndevida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\ViewMigracaoIndevida.aspx.designer.cs">
+      <DependentUpon>ViewMigracaoIndevida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\ViewNegativacaoIndevida.aspx.cs">
+      <DependentUpon>ViewNegativacaoIndevida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\ViewNegativacaoIndevida.aspx.designer.cs">
+      <DependentUpon>ViewNegativacaoIndevida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\ViewOutros.aspx.cs">
+      <DependentUpon>ViewOutros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\ViewOutros.aspx.designer.cs">
+      <DependentUpon>ViewOutros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\ViewPortabilidade.aspx.cs">
+      <DependentUpon>ViewPortabilidade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\ViewPortabilidade.aspx.designer.cs">
+      <DependentUpon>ViewPortabilidade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\ViewProblemasComVendas.aspx.cs">
+      <DependentUpon>ViewProblemasComVendas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\ViewProblemasComVendas.aspx.designer.cs">
+      <DependentUpon>ViewProblemasComVendas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\ViewProblemasTecnicos.aspx.cs">
+      <DependentUpon>ViewProblemasTecnicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\ViewProblemasTecnicos.aspx.designer.cs">
+      <DependentUpon>ViewProblemasTecnicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\ViewRedeCobertura.aspx.cs">
+      <DependentUpon>ViewRedeCobertura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\ViewRedeCobertura.aspx.designer.cs">
+      <DependentUpon>ViewRedeCobertura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\ViewServicosAdicionais.aspx.cs">
+      <DependentUpon>ViewServicosAdicionais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\ViewServicosAdicionais.aspx.designer.cs">
+      <DependentUpon>ViewServicosAdicionais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="template\RptAcidente.aspx.cs">
+      <DependentUpon>RptAcidente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\RptAcidente.aspx.designer.cs">
+      <DependentUpon>RptAcidente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="template\RptAcordoPrevio.aspx.cs">
+      <DependentUpon>RptAcordoPrevio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\RptAcordoPrevio.aspx.designer.cs">
+      <DependentUpon>RptAcordoPrevio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="template\RptCancelamento.aspx.cs">
+      <DependentUpon>RptCancelamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\RptCancelamento.aspx.designer.cs">
+      <DependentUpon>RptCancelamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="template\RptEntregaAparelho.aspx.cs">
+      <DependentUpon>RptEntregaAparelho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\RptEntregaAparelho.aspx.designer.cs">
+      <DependentUpon>RptEntregaAparelho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="template\RptExecLimiDesc.aspx.cs">
+      <DependentUpon>RptExecLimiDesc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\RptExecLimiDesc.aspx.designer.cs">
+      <DependentUpon>RptExecLimiDesc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="template\RptFraude.aspx.cs">
+      <DependentUpon>RptFraude.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\RptFraude.aspx.designer.cs">
+      <DependentUpon>RptFraude.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="template\RptMigracaoIndevida.aspx.cs">
+      <DependentUpon>RptMigracaoIndevida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\RptMigracaoIndevida.aspx.designer.cs">
+      <DependentUpon>RptMigracaoIndevida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="template\RptNegativacaoIndevida.aspx.cs">
+      <DependentUpon>RptNegativacaoIndevida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\RptNegativacaoIndevida.aspx.designer.cs">
+      <DependentUpon>RptNegativacaoIndevida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="template\RptOutros.aspx.cs">
+      <DependentUpon>RptOutros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\RptOutros.aspx.designer.cs">
+      <DependentUpon>RptOutros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="template\RptPortabilidade.aspx.cs">
+      <DependentUpon>RptPortabilidade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\RptPortabilidade.aspx.designer.cs">
+      <DependentUpon>RptPortabilidade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="template\RptProblemasComVendas.aspx.cs">
+      <DependentUpon>RptProblemasComVendas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\RptProblemasComVendas.aspx.designer.cs">
+      <DependentUpon>RptProblemasComVendas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="template\RptProblemaTecnico.aspx.cs">
+      <DependentUpon>RptProblemaTecnico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\RptProblemaTecnico.aspx.designer.cs">
+      <DependentUpon>RptProblemaTecnico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="template\RptRedeCobertura.aspx.cs">
+      <DependentUpon>RptRedeCobertura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\RptRedeCobertura.aspx.designer.cs">
+      <DependentUpon>RptRedeCobertura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="template\RptServicosAdicionais.aspx.cs">
+      <DependentUpon>RptServicosAdicionais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\RptServicosAdicionais.aspx.designer.cs">
+      <DependentUpon>RptServicosAdicionais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlAlertBootstrap.ascx.cs">
+      <DependentUpon>UserControlAlertBootstrap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlAlertBootstrap.ascx.designer.cs">
+      <DependentUpon>UserControlAlertBootstrap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlExecQuestao1.ascx.cs">
+      <DependentUpon>UserControlExecQuestao1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlExecQuestao1.ascx.designer.cs">
+      <DependentUpon>UserControlExecQuestao1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlQuestao10.ascx.cs">
+      <DependentUpon>UserControlQuestao10.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlQuestao10.ascx.designer.cs">
+      <DependentUpon>UserControlQuestao10.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlOcorrenciaNet.ascx.cs">
+      <DependentUpon>UserControlOcorrenciaNet.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlOcorrenciaNet.ascx.designer.cs">
+      <DependentUpon>UserControlOcorrenciaNet.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlQuestao13.ascx.cs">
+      <DependentUpon>UserControlQuestao13.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlQuestao13.ascx.designer.cs">
+      <DependentUpon>UserControlQuestao13.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlQuestao14.ascx.cs">
+      <DependentUpon>UserControlQuestao14.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlQuestao14.ascx.designer.cs">
+      <DependentUpon>UserControlQuestao14.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlQuestao12.ascx.cs">
+      <DependentUpon>UserControlQuestao12.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlQuestao12.ascx.designer.cs">
+      <DependentUpon>UserControlQuestao12.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlQuestao11.ascx.cs">
+      <DependentUpon>UserControlQuestao11.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlQuestao11.ascx.designer.cs">
+      <DependentUpon>UserControlQuestao11.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlExecQuestao3.ascx.cs">
+      <DependentUpon>UserControlExecQuestao3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlExecQuestao3.ascx.designer.cs">
+      <DependentUpon>UserControlExecQuestao3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlFormularioAcordo.ascx.cs">
+      <DependentUpon>UserControlFormularioAcordo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlFormularioAcordo.ascx.designer.cs">
+      <DependentUpon>UserControlFormularioAcordo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlShowImage.ascx.cs">
+      <DependentUpon>UserControlShowImage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlShowImage.ascx.designer.cs">
+      <DependentUpon>UserControlShowImage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlHeader.ascx.cs">
+      <DependentUpon>UserControlHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlHeader.ascx.designer.cs">
+      <DependentUpon>UserControlHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlQuestao3_4.ascx.cs">
+      <DependentUpon>UserControlQuestao3_4.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlQuestao3_4.ascx.designer.cs">
+      <DependentUpon>UserControlQuestao3_4.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlQuestao5.ascx.cs">
+      <DependentUpon>UserControlQuestao5.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlQuestao5.ascx.designer.cs">
+      <DependentUpon>UserControlQuestao5.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlQuestao6.ascx.cs">
+      <DependentUpon>UserControlQuestao6.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlQuestao6.ascx.designer.cs">
+      <DependentUpon>UserControlQuestao6.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlQuestao7.ascx.cs">
+      <DependentUpon>UserControlQuestao7.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlQuestao7.ascx.designer.cs">
+      <DependentUpon>UserControlQuestao7.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="template\UserControlUpdateProgress.ascx.cs">
+      <DependentUpon>UserControlUpdateProgress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\UserControlUpdateProgress.ascx.designer.cs">
+      <DependentUpon>UserControlUpdateProgress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="template\RptAcidente.rdlc" />
+    <EmbeddedResource Include="template\RptAcordoPrevio.rdlc" />
+    <EmbeddedResource Include="template\RptCancelamento.rdlc" />
+    <EmbeddedResource Include="template\RptEntregaAparelho.rdlc" />
+    <EmbeddedResource Include="template\RptExecLimiDesc.rdlc" />
+    <EmbeddedResource Include="template\RptFraude.rdlc" />
+    <EmbeddedResource Include="template\RptMigracaoIndevida.rdlc" />
+    <EmbeddedResource Include="template\RptNegativacaoIndevida.rdlc" />
+    <EmbeddedResource Include="template\RptOutros.rdlc" />
+    <EmbeddedResource Include="template\RptPortabilidade.rdlc" />
+    <EmbeddedResource Include="template\RptProblemasComVendas.rdlc" />
+    <EmbeddedResource Include="template\RptProblemaTecnico.rdlc" />
+    <EmbeddedResource Include="template\RptRedeCobertura.rdlc" />
+    <EmbeddedResource Include="template\RptServicosAdicionais.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutomacaoModel\AutomacaoModel.csproj">
+      <Project>{947c8ef3-4d96-48d1-b236-a02b44bcaa4d}</Project>
+      <Name>AutomacaoModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AutomocaoBll\AutomocaoBll.csproj">
+      <Project>{71ea70ce-334e-49d8-ba9d-e1796f1a0ada}</Project>
+      <Name>AutomocaoBll</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="upload\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53809</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53722/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

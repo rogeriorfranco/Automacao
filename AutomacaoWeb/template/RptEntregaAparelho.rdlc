@@ -1,0 +1,4716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Entrega de Aparelho</Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontSize>16pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Left>0.0225cm</Left>
+        <Height>0.75875cm</Height>
+        <Width>15.97612cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Rectangle Name="Rectangle1">
+        <KeepTogether>true</KeepTogether>
+        <Top>0.83989cm</Top>
+        <Left>0.0225cm</Left>
+        <Height>0.56854cm</Height>
+        <Width>16.8507cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>RoyalBlue</BackgroundColor>
+        </Style>
+      </Rectangle>
+      <Rectangle Name="Rectangle2">
+        <KeepTogether>true</KeepTogether>
+        <Top>7.21654cm</Top>
+        <Height>0.56854cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>RoyalBlue</BackgroundColor>
+        </Style>
+      </Rectangle>
+      <Textbox Name="Textbox12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>1. Cliente ativo?
+</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>7.92949cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>10.73737cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix10">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image10">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes6" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_1</DataSetName>
+        <Top>10.22282cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_1.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>questao_1</rd:DefaultName>
+        <Top>8.52676cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>10.31402cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_1.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>9.19596cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>2. Data da instalação ou habilitação do produto</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>19.89924cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>10.73737cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix11">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image11">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes7" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_2</DataSetName>
+        <Top>22.19257cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_2_dtInsQuestao">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!dtInsQuestao_2.Value, "dsRptEntregaAparelho")</Value>
+                <Style>
+                  <Format>dd/MM/yyyy</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>20.49651cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.41652cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_2.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>21.16571cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox14">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>3. Existe protocolo de reclamação/solicitações quanto à entrega?
+</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>31.96424cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>11.6643cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix12">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image12">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes8" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_3</DataSetName>
+        <Top>34.25757cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_3.Value, "dsRptEntregaAparelho")</Value>
+                <Style>
+                  <Format>d</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>32.52488cm</Top>
+        <Left>0.07279cm</Left>
+        <Height>0.6cm</Height>
+        <Width>9.33506cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_3.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>33.23071cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox15">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>4. Cliente reclama de negativação realizada pelo grupo?
+</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>43.99749cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>16.71838cm</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix13">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image13">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes9" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_4</DataSetName>
+        <Top>46.29082cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_4.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>questao_1</rd:DefaultName>
+        <Top>44.59476cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>9.33506cm</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_4.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>45.30059cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>18</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox16">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>5. Cliente reclama de negativação realizada por terceiros?
+</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>56.03074cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>16.7594cm</Width>
+        <ZIndex>19</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix14">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image14">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes10" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_5</DataSetName>
+        <Top>58.32407cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>20</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_11">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_5.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>questao_1</rd:DefaultName>
+        <Top>56.5561cm</Top>
+        <Left>0.07279cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.88527cm</Width>
+        <ZIndex>21</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_5.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>57.29721cm</Top>
+        <Left>0.01085cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>22</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox17">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>6. Há solicitação de aparelho na venda?
+
+</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>68.00049cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>15.97612cm</Width>
+        <ZIndex>23</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix15">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image15">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes11" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_6</DataSetName>
+        <Top>70.29382cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>24</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_6.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>questao_1</rd:DefaultName>
+        <Top>68.59776cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.88527cm</Width>
+        <ZIndex>25</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_11">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_6.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>69.26696cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>26</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox18">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>7. A solicitação do aparelho foi cadastrada no sistema de acordo com o acordado no momento da venda?
+
+</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>80.11311cm</Top>
+        <Left>0.0607cm</Left>
+        <Height>0.9571cm</Height>
+        <Width>16.2407cm</Width>
+        <ZIndex>27</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix16">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image16">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes12" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_7</DataSetName>
+        <Top>82.97794cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>28</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_7.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>questao_1</rd:DefaultName>
+        <Top>81.07021cm</Top>
+        <Left>0.07279cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.88527cm</Width>
+        <ZIndex>29</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_7.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>81.88188cm</Top>
+        <Left>0.07279cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>30</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox19">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>8. Possui utilização/tráfego na combinação IMEI/IMSI?
+
+
+</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>92.79988cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>16.77791cm</Width>
+        <ZIndex>31</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix17">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image17">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes13" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_8</DataSetName>
+        <Top>95.09321cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>32</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_14">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_8.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>questao_1</rd:DefaultName>
+        <Top>93.39715cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>9.33506cm</Width>
+        <ZIndex>33</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_8">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_8.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>94.06635cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>34</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>9. Há comprovação de entrega de aparelho ou nota fiscal assinada?
+
+</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>104.92045cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>16.2407cm</Width>
+        <ZIndex>35</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix18">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image18">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes14" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_9</DataSetName>
+        <Top>107.21378cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>36</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_9.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>105.51772cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.88527cm</Width>
+        <ZIndex>37</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_14">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_9.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>106.18692cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>38</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>10. Aparelho foi entregue dentro do prazo?
+</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>116.93132cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>16.2407cm</Width>
+        <ZIndex>39</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix19">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image19">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes15" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_10</DataSetName>
+        <Top>119.22465cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>40</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_16">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_10.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>questao_1</rd:DefaultName>
+        <Top>117.52859cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.62069cm</Width>
+        <ZIndex>41</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_15">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_10.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>118.19779cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>42</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox22">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>11. Recebeu o modelo que contratou?
+</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>128.97747cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>16.71838cm</Width>
+        <ZIndex>43</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix20">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image20">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes16" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_11</DataSetName>
+        <Top>131.30255cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>44</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_17">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_11.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>questao_1</rd:DefaultName>
+        <Top>129.4993cm</Top>
+        <Left>0.07279cm</Left>
+        <Height>0.6cm</Height>
+        <Width>9.33506cm</Width>
+        <ZIndex>45</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_16">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_11.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>130.27569cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>46</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox23">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>12. Aparelho recondicionado?</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>140.98834cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>16.2407cm</Width>
+        <ZIndex>47</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix21">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image21">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes17" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_12</DataSetName>
+        <Top>143.28167cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>48</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_12.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>questao_1</rd:DefaultName>
+        <Top>141.58561cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>10.31402cm</Width>
+        <ZIndex>49</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_12.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>142.25481cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>50</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox24">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>13. É Claro UP?</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>153.06977cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>16.2407cm</Width>
+        <ZIndex>51</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix22">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image22">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes18" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_13</DataSetName>
+        <Top>155.3631cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>52</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_19">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_13.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>questao_1</rd:DefaultName>
+        <Top>153.66704cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>10.31402cm</Width>
+        <ZIndex>53</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_13.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>154.33624cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>54</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox25">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>14. É Seguro Proteção Móvel?</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>165.08065cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>16.2407cm</Width>
+        <ZIndex>55</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix23">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image23">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes19" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_14</DataSetName>
+        <Top>167.37398cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>56</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_14.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>questao_1</rd:DefaultName>
+        <Top>165.67792cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>10.73737cm</Width>
+        <ZIndex>57</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_19">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_14.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>166.34712cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>58</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox26">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>15. Contrato objeto da petição é do autor?
+</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>177.05624cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>16.2407cm</Width>
+        <ZIndex>59</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix24">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image24">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes20" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_15</DataSetName>
+        <Top>179.34957cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>60</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_15.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>questao_1</rd:DefaultName>
+        <Top>177.65351cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>10.73737cm</Width>
+        <ZIndex>61</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_15.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>178.32271cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>62</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox27">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>16. Possui outros contratos em seu CPF/CNPJ?</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>189.03184cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>16.2407cm</Width>
+        <ZIndex>63</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix25">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image25">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes21" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_16</DataSetName>
+        <Top>191.32517cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>64</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_22">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_16.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>questao_1</rd:DefaultName>
+        <Top>189.62911cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>10.73737cm</Width>
+        <ZIndex>65</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_16.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>190.29831cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>66</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox28">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>17. Possui fatura(s) paga(s) e não contestadas?</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>201.04271cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>16.2407cm</Width>
+        <ZIndex>67</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix26">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image26">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes22" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_17</DataSetName>
+        <Top>203.33604cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>68</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_23">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_17.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>questao_1</rd:DefaultName>
+        <Top>201.6739cm</Top>
+        <Left>0.01085cm</Left>
+        <Height>0.6cm</Height>
+        <Width>10.75987cm</Width>
+        <ZIndex>69</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_22">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_17.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>202.30918cm</Top>
+        <Left>0.0607cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>70</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox32">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>19. Considerações finais
+</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>225.09973cm</Top>
+        <Left>0.0607cm</Left>
+        <Height>0.6cm</Height>
+        <Width>11.63695cm</Width>
+        <ZIndex>71</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="consideracoes">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!consideracao.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>225.84084cm</Top>
+        <Left>0.0607cm</Left>
+        <Height>1.57896cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>72</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox29">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>18. O problema objeto da petição foi resolvido?</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>213.08886cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>16.2407cm</Width>
+        <ZIndex>73</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix27">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image27">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes23" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_18</DataSetName>
+        <Top>215.38219cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>74</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="questao_18">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!questao_18.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>questao_1</rd:DefaultName>
+        <Top>213.68613cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.6cm</Height>
+        <Width>10.73737cm</Width>
+        <ZIndex>75</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="obs_questao_18">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_18.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>214.35533cm</Top>
+        <Left>0.03335cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>76</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix2">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>4.2846cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>12.51581cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.60661cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox52">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Nome do Cliente:</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#2e75b5</Color>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value xml:space="preserve"> </Value>
+                              <Style>
+                                <Color>CornflowerBlue</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox51</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="cliente2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!cliente.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>cliente</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.60661cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox59">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>CPF:</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#2e75b5</Color>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value xml:space="preserve"> </Value>
+                              <Style>
+                                <Color>CornflowerBlue</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox58</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="cpf2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!cpf.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>cpf</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.60661cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox61">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Nº da Linha:</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#2e75b5</Color>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value xml:space="preserve"> </Value>
+                              <Style>
+                                <Color>CornflowerBlue</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox60</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="nro_linha2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!nro_linha.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>nro_linha</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.60661cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox63">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Nº do Contrato:</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#2e75b5</Color>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value xml:space="preserve"> </Value>
+                              <Style>
+                                <Color>CornflowerBlue</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox62</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="nro_contrato2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!nro_contrato.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>nro_contrato</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.60661cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox65">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Nº do Processo:</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#2e75b5</Color>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value xml:space="preserve"> </Value>
+                              <Style>
+                                <Color>CornflowerBlue</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox64</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="nro_processo2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!nro_processo.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>nro_processo</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.60661cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox67">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Resumo Reclamação:</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#2e75b5</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox66</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="resumo_reclamacao2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!resumo_reclamacao.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>resumo_reclamacao</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.60661cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox70">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Reclamação do Cliente:</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#2e75b5</Color>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value xml:space="preserve"> </Value>
+                              <Style>
+                                <Color>CornflowerBlue</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox69</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="reclamacao_cliente2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!reclamacao_cliente.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>reclamacao_cliente</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.60661cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox72">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Observações:</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#2e75b5</Color>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value xml:space="preserve"> </Value>
+                              <Style>
+                                <Color>CornflowerBlue</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox71</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="observacoes2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!observacoes.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>observacoes</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox76">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Escritório:</Value>
+                              <Style>
+                                <FontStyle>Normal</FontStyle>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>#2e75b5</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox76</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="escritorio">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!escritorio.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>escritorio</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>White</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsRptFormulario</DataSetName>
+        <Top>1.53544cm</Top>
+        <Left>0.01085cm</Left>
+        <Height>5.45288cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>77</ZIndex>
+        <Style>
+          <Border>
+            <Color>White</Color>
+            <Style>None</Style>
+            <Width>0.25pt</Width>
+          </Border>
+          <Color>White</Color>
+        </Style>
+      </Tablix>
+      <Textbox Name="Textbox30">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>20. Telas Adicionais</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#2e75b5</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>227.52563cm</Top>
+        <Left>0.0607cm</Left>
+        <Height>0.6cm</Height>
+        <Width>16.2407cm</Width>
+        <ZIndex>78</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="Tablix28">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>16.80042cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>9.61171cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Image Name="Image28">
+                      <Source>Database</Source>
+                      <Value>=Fields!img.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalhes24" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>dsImagemQuestao_20</DataSetName>
+        <Top>229.24746cm</Top>
+        <Left>0.0607cm</Left>
+        <Height>9.61171cm</Height>
+        <Width>16.80042cm</Width>
+        <ZIndex>79</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="obs_questao_23">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!obs_questao_20.Value, "dsRptEntregaAparelho")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>obs_questao_1</rd:DefaultName>
+        <Top>228.2206cm</Top>
+        <Left>0.0607cm</Left>
+        <Height>0.9175cm</Height>
+        <Width>16.80041cm</Width>
+        <ZIndex>80</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>94.06959in</Height>
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+    </Style>
+  </Body>
+  <Width>6.64299in</Width>
+  <Page>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="AutomacaoDal">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>c6a58d97-36f7-429b-8b03-c9a5ce3411b4</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="dsRptFormulario">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="id_caso">
+          <DataField>id_caso</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="tipoFormularioId">
+          <DataField>tipoFormularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TipoFormulario">
+          <DataField>TipoFormulario</DataField>
+          <rd:TypeName>AutomocaoModel.TipoFormulario</rd:TypeName>
+        </Field>
+        <Field Name="cliente">
+          <DataField>cliente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cpf">
+          <DataField>cpf</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nro_linha">
+          <DataField>nro_linha</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nro_contrato">
+          <DataField>nro_contrato</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nro_processo">
+          <DataField>nro_processo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="resumo_reclamacao">
+          <DataField>resumo_reclamacao</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="reclamacao_cliente">
+          <DataField>reclamacao_cliente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="observacoes">
+          <DataField>observacoes</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="empresa">
+          <DataField>empresa</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="produto">
+          <DataField>produto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="escritorio">
+          <DataField>escritorio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>FormularioDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.FormularioDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsRptEntregaAparelho">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomacaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="questao_1">
+          <DataField>questao_1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_1">
+          <DataField>obs_questao_1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="dtInsQuestao_2">
+          <DataField>dtInsQuestao_2</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_2">
+          <DataField>obs_questao_2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questao_3">
+          <DataField>questao_3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_3">
+          <DataField>obs_questao_3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questao_4">
+          <DataField>questao_4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_4">
+          <DataField>obs_questao_4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questao_5">
+          <DataField>questao_5</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_5">
+          <DataField>obs_questao_5</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questao_6">
+          <DataField>questao_6</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_6">
+          <DataField>obs_questao_6</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questao_7">
+          <DataField>questao_7</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_7">
+          <DataField>obs_questao_7</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questao_8">
+          <DataField>questao_8</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_8">
+          <DataField>obs_questao_8</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questao_9">
+          <DataField>questao_9</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_9">
+          <DataField>obs_questao_9</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questao_10">
+          <DataField>questao_10</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_10">
+          <DataField>obs_questao_10</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questao_11">
+          <DataField>questao_11</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_11">
+          <DataField>obs_questao_11</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questao_12">
+          <DataField>questao_12</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_12">
+          <DataField>obs_questao_12</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questao_13">
+          <DataField>questao_13</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_13">
+          <DataField>obs_questao_13</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questao_14">
+          <DataField>questao_14</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_14">
+          <DataField>obs_questao_14</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questao_15">
+          <DataField>questao_15</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_15">
+          <DataField>obs_questao_15</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questao_16">
+          <DataField>questao_16</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_16">
+          <DataField>obs_questao_16</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questao_17">
+          <DataField>questao_17</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_17">
+          <DataField>obs_questao_17</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questao_18">
+          <DataField>questao_18</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_18">
+          <DataField>obs_questao_18</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="consideracao">
+          <DataField>consideracao</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs_questao_20">
+          <DataField>obs_questao_20</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="preenchimentoCompleto">
+          <DataField>preenchimentoCompleto</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>EntregaAparelhoDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.EntregaAparelhoDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_1">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_2">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_3">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_4">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_5">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_6">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_7">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_8">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_9">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_10">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_11">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_12">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_13">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_14">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_15">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_16">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_17">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_18">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="formularioId">
+          <DataField>formularioId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Formulario">
+          <DataField>Formulario</DataField>
+          <rd:TypeName>AutomocaoModel.Formulario</rd:TypeName>
+        </Field>
+        <Field Name="nro_pergunta">
+          <DataField>nro_pergunta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="sub_nro">
+          <DataField>sub_nro</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsImagemQuestao_20">
+      <Query>
+        <DataSourceName>AutomacaoDal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="img">
+          <DataField>img</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AutomacaoDal</rd:DataSetName>
+        <rd:TableName>ImagemDal</rd:TableName>
+        <rd:ObjectDataSourceSelectMethod>read</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceSelectMethodSignature>System.Collections.Generic.List`1[AutomacaoModel.ImagemRelatorio] read(Int32, Int32, System.Nullable`1[System.Int32])</rd:ObjectDataSourceSelectMethodSignature>
+        <rd:ObjectDataSourceType>AutomacaoDal.ImagemDal, AutomacaoDal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>f1a39167-b98a-4545-afff-3bfbece85319</rd:ReportID>
+</Report>

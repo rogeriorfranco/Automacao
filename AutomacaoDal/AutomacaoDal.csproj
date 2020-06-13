@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0EBEDEEC-6CC9-47DE-8895-28950225EFC5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutomacaoDal</RootNamespace>
+    <AssemblyName>AutomacaoDal</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcidenteDal.cs" />
+    <Compile Include="AcordoPrevioDal.cs" />
+    <Compile Include="AnoDal.cs" />
+    <Compile Include="AreaCausadoraDal.cs" />
+    <Compile Include="AutomacaoDbContext.cs" />
+    <Compile Include="CanalDal.cs" />
+    <Compile Include="CancelamentoDal.cs" />
+    <Compile Include="CentroCustoDal.cs" />
+    <Compile Include="CidadeDal.cs" />
+    <Compile Include="ConexaoAdo.cs" />
+    <Compile Include="EmpresaDal.cs" />
+    <Compile Include="EntregaAparelhoDal.cs" />
+    <Compile Include="EstadoDal.cs" />
+    <Compile Include="ExeLimiDescDAl.cs" />
+    <Compile Include="FormularioAcordoDal.cs" />
+    <Compile Include="FormularioDal.cs" />
+    <Compile Include="FraudeDal.cs" />
+    <Compile Include="GenericCrudDal.cs" />
+    <Compile Include="IAcidenteDal.cs" />
+    <Compile Include="IAcordoPrevioDal.cs" />
+    <Compile Include="IAnoDal.cs" />
+    <Compile Include="IAreaCausadoraDal.cs" />
+    <Compile Include="IQuestaoNetDal.cs" />
+    <Compile Include="ISubContratoDal.cs" />
+    <Compile Include="IRespostaOperacaoDal.cs" />
+    <Compile Include="IQuestao10Dal.cs" />
+    <Compile Include="IQuestao13Dal.cs" />
+    <Compile Include="IQuestao14Dal.cs" />
+    <Compile Include="IQuestao12Dal.cs" />
+    <Compile Include="IQuestao11Dal.cs" />
+    <Compile Include="IStatusReaberturaDal.cs" />
+    <Compile Include="ICanalDal.cs" />
+    <Compile Include="ICancelamentoDal .cs" />
+    <Compile Include="ICentroCustoDal.cs" />
+    <Compile Include="ICidadeDal.cs" />
+    <Compile Include="IEmpresaDal.cs" />
+    <Compile Include="IEntregaAparelhoDal.cs" />
+    <Compile Include="IEstadoDal.cs" />
+    <Compile Include="IExeLimiDescDal.cs" />
+    <Compile Include="IFormularioAcordoDal.cs" />
+    <Compile Include="IFormularioDal.cs" />
+    <Compile Include="IFraudeDal.cs" />
+    <Compile Include="IGenericCrudDal.cs" />
+    <Compile Include="ILogMudancaFormularioDal.cs" />
+    <Compile Include="IImagemDal.cs" />
+    <Compile Include="IOutrosDal.cs" />
+    <Compile Include="IReclamacaoClienteDal.cs" />
+    <Compile Include="IRedeCobertura.cs" />
+    <Compile Include="LogMudancaFormulariomDal.cs" />
+    <Compile Include="ImagemDal.cs" />
+    <Compile Include="IMigracaoIndevida.cs" />
+    <Compile Include="IMotivoContestacaoDal.cs" />
+    <Compile Include="IMotivoDal.cs" />
+    <Compile Include="INegativacaoIndevidaDal.cs" />
+    <Compile Include="IParceiroOfensorDal.cs" />
+    <Compile Include="IPendenteDal.cs" />
+    <Compile Include="IPercursoCobrancaDal.cs" />
+    <Compile Include="IPortabilidadeDal.cs" />
+    <Compile Include="IProblemasComVendas.cs" />
+    <Compile Include="IProblemaTecnico.cs" />
+    <Compile Include="IProdutoDal.cs" />
+    <Compile Include="IQuestao1Dal.cs" />
+    <Compile Include="IQuestao3Dal.cs" />
+    <Compile Include="IQuestao3_4_APSDal.cs" />
+    <Compile Include="IQuestao5Dal.cs" />
+    <Compile Include="IQuestao6Dal.cs" />
+    <Compile Include="IQuestao7Dal.cs" />
+    <Compile Include="IResponsavelDescumprimentoDal.cs" />
+    <Compile Include="IServicoAdicionalDal.cs" />
+    <Compile Include="ISubMotivoDal.cs" />
+    <Compile Include="MigracaoIndevidaDal.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MotivoContestacaoDal.cs" />
+    <Compile Include="MotivoDal.cs" />
+    <Compile Include="NegativacaoIndevidaDAl.cs" />
+    <Compile Include="OutrosDal.cs" />
+    <Compile Include="ParceiroOfensorDal.cs" />
+    <Compile Include="PendenteDal.cs" />
+    <Compile Include="PercursoCobrancaDal.cs" />
+    <Compile Include="PortabilidadeDal.cs" />
+    <Compile Include="ProblemasComVendasDal.cs" />
+    <Compile Include="ProblemaTecnicoDal.cs" />
+    <Compile Include="ProdutoDal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestaoNetDal.cs" />
+    <Compile Include="SubContratoDal.cs" />
+    <Compile Include="RespostaOperacaoDal.cs" />
+    <Compile Include="Questao10Dal.cs" />
+    <Compile Include="Questao13Dal.cs" />
+    <Compile Include="Questao14Dal.cs" />
+    <Compile Include="Questao12Dal.cs" />
+    <Compile Include="Questao1Dal.cs" />
+    <Compile Include="Questao3Dal.cs" />
+    <Compile Include="Questao3_4_APSDal.cs" />
+    <Compile Include="Questao5Dal.cs" />
+    <Compile Include="Questao6Dal.cs" />
+    <Compile Include="Questao7Dal.cs" />
+    <Compile Include="ReclamacaoClienteDal.cs" />
+    <Compile Include="Questao11Dal.cs" />
+    <Compile Include="StatusReaberturaDal.cs" />
+    <Compile Include="RedeCoberturaDal.cs" />
+    <Compile Include="ResponsavelDescumprimentoDal.cs" />
+    <Compile Include="ServicoAdicionalDal.cs" />
+    <Compile Include="SubMotivoDal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutomacaoModel\AutomacaoModel.csproj">
+      <Project>{947c8ef3-4d96-48d1-b236-a02b44bcaa4d}</Project>
+      <Name>AutomacaoModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

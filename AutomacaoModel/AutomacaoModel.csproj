@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{947C8EF3-4D96-48D1-B236-A02B44BCAA4D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutomacaoModel</RootNamespace>
+    <AssemblyName>AutomacaoModel</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acidente.cs" />
+    <Compile Include="AcordoPrevio.cs" />
+    <Compile Include="Ano.cs" />
+    <Compile Include="AreaCausadora.cs" />
+    <Compile Include="Canal.cs" />
+    <Compile Include="Cancelamento.cs" />
+    <Compile Include="CentroCusto.cs" />
+    <Compile Include="copyImageRequest.cs" />
+    <Compile Include="Formulario1.cs" />
+    <Compile Include="Imagem.cs" />
+    <Compile Include="QuestoesIwHistorico.cs" />
+    <Compile Include="QuestaoNet.cs" />
+    <Compile Include="SubContrato.cs" />
+    <Compile Include="RespostaOperacao.cs" />
+    <Compile Include="Questao10.cs" />
+    <Compile Include="Questao13.cs" />
+    <Compile Include="Questao14.cs" />
+    <Compile Include="Questao12.cs" />
+    <Compile Include="Questao11.cs" />
+    <Compile Include="Questao4.cs" />
+    <Compile Include="StatusReabertura.cs" />
+    <Compile Include="Cidade.cs" />
+    <Compile Include="Empresa.cs" />
+    <Compile Include="EntregaAparelho.cs" />
+    <Compile Include="Estado.cs" />
+    <Compile Include="ExeLimiDesc.cs" />
+    <Compile Include="ImagemRelatorio.cs" />
+    <Compile Include="ImagemRequest.cs" />
+    <Compile Include="Outros.cs" />
+    <Compile Include="QuestaoFormulario.cs" />
+    <Compile Include="Formulario.cs" />
+    <Compile Include="FormularioAcordo.cs" />
+    <Compile Include="LogMudancaFormulario.cs" />
+    <Compile Include="Fraude.cs" />
+    <Compile Include="MigracaoIndevida.cs" />
+    <Compile Include="Motivo.cs" />
+    <Compile Include="MotivoContestacao.cs" />
+    <Compile Include="NegativacaoIndevida.cs" />
+    <Compile Include="ParceiroOfensor.cs" />
+    <Compile Include="Pendente.cs" />
+    <Compile Include="PercursoCobranca.cs" />
+    <Compile Include="Portabilidade.cs" />
+    <Compile Include="ProblemasComVenda.cs" />
+    <Compile Include="ProblemaTecnico.cs" />
+    <Compile Include="Produto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Questao1.cs" />
+    <Compile Include="Questao3.cs" />
+    <Compile Include="Questao3_4AcordoPrevSub.cs" />
+    <Compile Include="Questao5.cs" />
+    <Compile Include="Questao6.cs" />
+    <Compile Include="Questao7.cs" />
+    <Compile Include="Questionario.cs" />
+    <Compile Include="ReclamacaoCliente.cs" />
+    <Compile Include="RedeCobertura.cs" />
+    <Compile Include="ResponsavelDescumprimento.cs" />
+    <Compile Include="ServicoAdicional.cs" />
+    <Compile Include="SubMotivo.cs" />
+    <Compile Include="TipoFormulario.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
